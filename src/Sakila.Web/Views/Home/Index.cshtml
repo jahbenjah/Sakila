@@ -1,0 +1,18 @@
+﻿@model List<Sakila.Core.Entities.Actor>  
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenidos</h1>
+    <p>Los actores en la base Sakila son:</p>
+</div>
+
+<div>
+    <ul class="list-group">
+        @foreach (var actor in Model)
+        {
+        <li class="list-group-item">@actor.FirstName @actor.LastName;</li>
+        }
+    </ul>
+</div>
